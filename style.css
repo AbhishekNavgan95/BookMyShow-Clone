@@ -1,0 +1,461 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --body-color: #f3f3f3;
+    --footer-bg1: #313035;
+    --footer-bg2: #404043;
+    --primary-color: #fd5e7b;
+    --secondary-color: #dc3d5a;
+    --main-bg-color: #333545;
+    --secondary-bg-color: #1f2533;
+    --white-plane: #ffff;
+    --medium-white:#ebeaea;
+    --medium-black:rgba(2, 2, 2, 0.461);
+    --tra-black: #ffffff00;
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+a {
+    color: rgba(255, 255, 255, 0.739);
+}
+
+/******************* utility classes **************************/
+
+.flex {
+    display: flex;
+}
+
+.container {
+    padding-inline: 340px;
+    justify-content: space-between;
+}
+
+.button {
+    text-decoration: none;
+    color: var(--white-plane);
+    background-color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--tra-black);
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.play-btn {
+    display: flex;
+    padding: 15px 15px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white-plane);
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.home-btn {
+    background-color: var(--white-plane);
+    min-height: 50px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.home-btn a{
+    text-decoration: none;
+    color: var(--medium-black);
+}
+
+/******************* Navbar **************************/
+
+.navbar {
+    background-color: var(--main-bg-color);
+    /* padding-inline: 340px; */
+    height: 65px;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.box {
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.bms-logo {
+    color: var(--white-plane);
+    width: 120px;
+}
+
+.search-bar {
+    align-items: center;
+    border: 2px solid var(--tra-black);
+}
+
+.search-bar:hover {
+    border: 2px solid var(--secondary-color);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.search-icon {
+    border: none;
+    background-color: var(--white-plane);
+    padding: 10px 18px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.text-area {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    min-width: 510px;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+
+/******************* subNav-bar **************************/
+
+.subnav-sec1 a:hover,
+.subnav-sec2 a:hover {
+    /* text-decoration: underline; */
+    color: var(--primary-color);
+    /* font-weight: 600; */
+}
+
+.subnav-sec2 {
+    font-weight: 600;
+}
+
+.subnav {
+    background-color: var(--secondary-bg-color);
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+
+/******************* HERO section **************************/
+
+#slider {
+    overflow: hidden;
+    padding-block: 10px;
+}
+
+.slider-container {
+    background-color: var(--medium-white);
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: -100%;
+    animation: 10s sliding infinite;
+}
+
+.slides {
+    padding-inline: 5px;
+}
+
+#slider figure img {
+    float: left;
+    width: 20%;
+}
+
+@keyframes sliding {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/******************* recommended movies section **************************/
+
+
+.rec {
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rec-part1 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rec-part1 a {
+    color: var(--secondary-color);
+}
+
+.rec-part2 {
+    gap: 2rem;
+}
+
+.cards {
+    flex-direction: column;
+    overflow: hidden;
+    gap: 10px;
+    width: 20%;
+}
+
+.cards h3 {
+    font-weight: 500;
+}
+
+.cards img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/******************* stream section **************************/
+
+.stream {
+    margin-block: 4rem;
+}
+
+.stream img{
+    width: 100%;
+}
+
+/******************* events section **************************/
+
+.events {
+    margin-block: 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.events-part2 img{
+    width: 17%;
+    border-radius: 10px;
+}
+
+.events-part2 {
+    justify-content: space-between;
+}
+
+/******************* premiere section **************************/
+
+.pre {
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--secondary-bg-color);
+    gap: 10px;
+    padding-block: 20px;
+    color: var(--medium-white);
+}
+
+.pre-part1 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    justify-content: start;
+    gap: 10px;
+}
+
+.pre-part1-part2 {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pre-part3 {
+    justify-content: space-between;
+}
+
+.pre-card {
+    flex-direction: column;
+    width: 18%;
+    gap: 5px;
+    line-height: 25px;
+}
+
+.pre-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/******************* Trending section **************************/
+
+.trending {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 20px;
+}
+
+.trending-part2 {
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+}
+
+.option {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    background-color: var(--white-plane);
+    padding: 15px;
+    gap: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--tra-black);
+}
+
+.option:hover {
+    background-color: var(--medium-white);
+    border: 1px solid var(--primary-color);
+}
+
+.option h3 {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.option p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--medium-black);
+}
+
+/******************* List your show section **************************/
+
+.contact {
+    background-color: var(--footer-bg1);
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    color: var(--white-plane);
+}
+
+.contact a {
+    font-size: 20px;
+}
+
+/******************* costomer-service section **************************/
+
+.costomer-service {
+    min-height: 130px;
+    background-color: var(--footer-bg2);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c-s-options {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.c-s-options a{
+    text-decoration: none;
+}
+
+.c-s-options a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+/******************* Footer section **************************/
+
+.follow-us {
+    min-height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.s-m-icons {
+    color: var(--white-plane);
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: var(--medium-black);
+    border: 1px solid var(--white-plane);
+}
+
+.s-m-icons:hover {
+    background-color: var(--white-plane);
+    color: var(--main-bg-color);
+}
+
+.footer {
+    background-color: var(--footer-bg1);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo img{
+    width: 150px;
+    padding-top: 50px;
+}
+
+/******************* media querries **************************/
+
+
+@media screen and (max-width: 1646px) {
+    .container {
+        padding-inline: 200px;
+    }
+}
+
+@media screen and (max-width: 1488px) {
+    .container {
+        padding-inline: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .text-area {
+        min-width: 450px;
+    }
+}
